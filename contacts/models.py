@@ -19,3 +19,5 @@ class Contact(models.Model):
     city = models.CharField(max_length=255, null=True, blank=True)
     state = USStateField(null=True, blank=True)
     zip_code = USZipCodeField(null=True, blank=True)
+    birthday = models.DateField(null=True, blank=True)
+    note = models.DateTimeField(null=True, blank=True)
