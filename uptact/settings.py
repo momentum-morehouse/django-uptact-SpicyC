@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-uptact-spicyc-2--spicyc.repl.co']
+ALLOWED_HOSTS = ['django-uptact-spicyc-2--spicyc.repl.co', '10.128.1.132']
 
 # Application definition
 

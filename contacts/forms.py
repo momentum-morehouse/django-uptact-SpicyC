@@ -1,5 +1,6 @@
 from django import forms
 from .models import Contact
+import datetime
 #from notes.models import Note
 
 
@@ -16,7 +17,6 @@ class ContactForm(forms.ModelForm):
             'phone_number',
             'email',
             'birthday',
-            'note'
         ]
 
 #class NoteForm(forms.ModelForm):
@@ -25,3 +25,12 @@ class ContactForm(forms.ModelForm):
 #         fields = [
 #             'note'
 #         ]
+
+        widgets = {
+        'birthday': forms.DateInput(format=('%m/%d/%Y'), attrs=
+        {'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
+        }
+
+class DateForm(forms.Form):
+    day = forms.DateField(initial=datetime.date.today)
+print(DateForm())
