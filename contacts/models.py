@@ -27,5 +27,5 @@ class Contact(models.Model):
 
 class Note(models.Model):
     contact = models.ForeignKey(Contact, on_delete=models.CASCADE, related_name= "notes")
-    note = models.CharField(max_length=255, null=True, blank=True)
+    note = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
